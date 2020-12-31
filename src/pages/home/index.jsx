@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
 
 const App = () => {
     const [count, setCount] = useState(0);
@@ -41,10 +43,9 @@ const App = () => {
 
     // 使用useRef全局变量
     useEffect(() => {
-        console.log('use effect...', count);
         const timer = setInterval(() => {
             console.log('timer...count:', countRef.current);
-            setCount(++countRef.current);
+            // setCount(++countRef.current);
         });
         return () => {
             console.log('clearInterval');
@@ -54,14 +55,16 @@ const App = () => {
 
     return (
         <div className="home">
-           <p>You clicked {count} times</p>
-           <button onClick={() => setCount(count + 1)}>Click me</button>
-           <p>Your Name is {name}</p>
-           <input type="text" ref={inputRef}/>
-           <button onClick={() => setName(inputRef.current.value)}>Modify me</button>
-           <p><a href="/#list">goto list page</a></p>
-           <p><a href="/#detail/1">goto detail page</a></p>
-           <p><a href="/#404">goto 404 page</a></p>
+            <Header></Header>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>Click me</button>
+            <p>Your Name is {name}</p>
+            <input type="text" ref={inputRef}/>
+            <button onClick={() => setName(inputRef.current.value)}>Modify me</button>
+            <p><a href="/#list">goto list page</a></p>
+            <p><a href="/#detail/1">goto detail page</a></p>
+            <p><a href="/#404">goto 404 page</a></p>
+            <Footer></Footer>
         </div>
     );
 };

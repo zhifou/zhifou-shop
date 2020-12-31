@@ -1,0 +1,21 @@
+@import "../../common/scss/global.scss";
+@import "../../common/scss/variable.scss";
+
+header {
+    margin-bottom: 0;
+    height: px2rem(82px);
+    font-size: px2rem(12px);
+    background: $color-primary;
+
+    ul {
+        li {
+            img {
+                height: px2rem(80px);
+            }
+        }
+    }
+
+    .title {
+        font-size: px2vw(14px);
+    }
+}

@@ -1,2 +1,2 @@
-# react-hook
-react-hook学习脚手架
+# zhifou-shop
+zhifou-shop是一个知否的零售商店。

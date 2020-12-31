@@ -1,0 +1,13 @@
+@import "../../common/scss/global.scss";
+@import "../../common/scss/variable.scss";
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    height: px2rem(82px);
+    font-size: px2rem(12px);
+    background: $color-primary;
+}
